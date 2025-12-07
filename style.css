@@ -565,3 +565,19 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.4;
     margin-top: auto; /* Push to the bottom */
 }
+
+/* Discord Widget Card Styling */
+.discord-widget-card {
+    /* Optional: Fügt eine subtile Animation hinzu */
+    animation: pulse-border 2s infinite alternate;
+}
+
+/* Keyframe für eine pulsierende Grenze, die dezent auf das Widget hinweist */
+@keyframes pulse-border {
+    from {
+        border-color: rgba(255, 0, 64, 0.3);
+    }
+    to {
+        border-color: rgba(255, 0, 64, 0.6);
+    }
+}
