@@ -19,9 +19,17 @@
   <url>
     <loc>https://crayonsmp.com/rules</loc> <priority>0.80</priority>
   </url>
+
+  <url>
+    <loc>https://crayonsmp.com/team</loc> <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://crayonsmp.com/pioneers</loc> <priority>0.80</priority>
+  </url>
   
   <url>
-    <loc>https://crayonsmp.com/impressum</loc> <priority>0.80</priority>
+    <loc>https://crayonsmp.com/imprint</loc> <priority>0.80</priority>
   </url>
 
 
