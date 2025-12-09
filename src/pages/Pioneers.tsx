@@ -121,7 +121,7 @@ function Pioneers() {
 
   const sponsors = [
     {
-      name: "Syntaxjason",
+      name: "SyntaxJason",
       nickname: "@syntaxjason",
       role: "Partner",
       image: "/media/team-pf/SyntaxJson.png",
