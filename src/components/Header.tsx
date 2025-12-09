@@ -7,7 +7,6 @@ import {
   Info,
   HelpCircle,
   Code2,
-  Users,
   Trophy,
   UsersRound,
 } from "lucide-react";
