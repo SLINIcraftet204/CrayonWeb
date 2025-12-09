@@ -5,11 +5,13 @@ on:
     branches:
       - dev
 
+# These permissions are crucial
 permissions:
   contents: read
   pages: write
   id-token: write
 
+# Prevent concurrent deployments
 concurrency:
   group: "pages"
   cancel-in-progress: false
@@ -25,9 +27,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+          cache: 'npm'
           
       - name: Install dependencies
-        run: npm install 
+        run: npm ci
         
       - name: Build
         run: npm run build
@@ -38,6 +41,7 @@ jobs:
           path: ./dist
 
   deploy:
+    # Add this environment configuration
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
