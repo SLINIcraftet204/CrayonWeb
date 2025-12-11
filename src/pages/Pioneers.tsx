@@ -78,6 +78,26 @@ function Pioneers() {
         },
       ],
     },
+    {
+      name: "Shadow_CatNinja",
+      nickname: "@Shadow_CatNinja",
+      role: "Streamer",
+      image: "/media/streamer-pf/Shadow_CatNinja.png",
+      quote: "Sneaky as a cat, fast as a ninja.",
+      color: "#9735f2",
+      socials: [
+        {
+          icon: Twitch,
+          url: "https://www.twitch.tv/shadow_catninja",
+          label: "Twitch",
+        },
+        {
+          icon: Youtube,
+          url: "https://www.youtube.com/@Shadow_CatNinja",
+          label: "YouTube",
+        },
+      ],
+    },
   ];
 
   const members = [
