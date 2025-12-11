@@ -60,7 +60,7 @@ function Pioneers() {
     },
     {
       name: "Liondro",
-      nickname: "@Liondrotv",
+      nickname: "@Liondro_tv",
       role: "Streamer",
       image: "/media/streamer-pf/Liondro.png",
       quote: "A guy with a mask",
@@ -68,7 +68,7 @@ function Pioneers() {
       socials: [
         {
           icon: Twitch,
-          url: "https://m.twitch.tv/liondro",
+          url: "https://m.twitch.tv/liondro_",
           label: "Twitch",
         },
         {
