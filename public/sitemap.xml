@@ -11,7 +11,7 @@
     </image:image>
 
     <video:video>
-      <video:title>NexoMaker 0.6 Preview</video:title> <video:description>The 0.6 Preview for NexoMaker.</video:description> <video:content_loc>https://crayonsmp.com/nexomaker.mp4</video:content_loc> <video:duration>58</video:duration>
+      <video:title>NexoMaker Preview</video:title> <video:description>The Preview for NexoMaker.</video:description> <video:content_loc>https://crayonsmp.com/media/nexomaker.mp4</video:content_loc> <video:duration>58</video:duration>
     </video:video>
 
   </url>

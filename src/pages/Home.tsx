@@ -129,7 +129,7 @@ function Home() {
               >
                 <Shield className="w-8 h-8 text-[#3498db]" />
               </div>
-              <h3 className="feature-card-title">Free Forever</h3>
+              <h3 className="feature-card-title">Free Nexomaker</h3>
               <p className="feature-card-description">
                 Complete access to NexoMaker for the project's lifetime
               </p>
@@ -325,7 +325,7 @@ function Home() {
             </div>
           </div>
           <p className="text-center text-sm text-gray-500 mt-10">
-            Minecraft Java Edition 1.21.8 required to play.
+            Minecraft Java Edition 1.21.10 required to play.
           </p>
         </section>
 
