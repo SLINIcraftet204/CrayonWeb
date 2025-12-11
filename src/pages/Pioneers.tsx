@@ -98,16 +98,13 @@ function Pioneers() {
         },
       ],
     },
-  ];
-
-  const members = [
     {
       name: "Ahmed",
       nickname: "@theahmedhd",
-      role: "Player",
+      role: "Streamer",
       image: "/media/streamer-pf/Ahmed.gif",
       quote: "Burns like fire",
-      color: "#4d4848",
+      color: "#9735f2",
       socials: [
         { icon: Twitch, url: "https://twitch.com/theahmedhd", label: "Twitch" },
         {
@@ -117,6 +114,9 @@ function Pioneers() {
         },
       ],
     },
+  ];
+
+  const members = [
     {
       name: "Tamashii",
       nickname: "@tamashiimon",
