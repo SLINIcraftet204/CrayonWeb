@@ -82,9 +82,25 @@ function Pioneers() {
 
   const members = [
     {
+      name: "Ahmed",
+      nickname: "@theahmedhd",
+      role: "Player",
+      image: "/media/streamer-pf/Ahmed.gif",
+      quote: "Burns like fire",
+      color: "#4d4848",
+      socials: [
+        { icon: Twitch, url: "https://twitch.com/theahmedhd", label: "Twitch" },
+        {
+          icon: Youtube,
+          url: "https://youtube.com/@theahmedhd.?si=rv5ZFxgBb0oHb44o",
+          label: "YouTube",
+        },
+      ],
+    },
+    {
       name: "Tamashii",
       nickname: "@tamashiimon",
-      role: "Creator",
+      role: "Founder",
       image: "/media/team-pf/tamashii.png",
       quote: "I am not only a Staff but also a Player.",
       color: "#C0C0C0",
@@ -102,21 +118,23 @@ function Pioneers() {
       ],
     },
     {
-      name: "Ahmed",
-      nickname: "@theahmedhd",
-      role: "Player",
-      image: "/media/streamer-pf/Ahmed.gif",
-      quote: "Burns like fire",
-      color: "#4d4848",
-      socials: [
-        { icon: Twitch, url: "https://twitch.com/theahmedhd", label: "Twitch" },
-        {
-          icon: Youtube,
-          url: "https://youtube.com/@theahmedhd.?si=rv5ZFxgBb0oHb44o",
-          label: "YouTube",
-        },
-      ],
+      name: "Qeonix",
+      nickname: "@qeonix__",
+      role: "Founder",
+      image: "/media/team-pf/jonathan.png",
+      quote: "n/a",
+      color: "#C0C0C0",
+      socials: [],
     },
+    {
+      name: "Fotrapsy",
+      nickname: "@fotrapsy",
+      role: "Hidden Admin",
+      image: "/media/team-pf/fotrapsy.png",
+      quote: "There is not enough stupid in the world to describe me.",
+      color: "#C0C0C0",
+      socials: [],
+    }
   ];
 
   const sponsors = [
