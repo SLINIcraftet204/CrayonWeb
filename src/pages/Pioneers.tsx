@@ -68,7 +68,7 @@ function Pioneers() {
       socials: [
         {
           icon: Twitch,
-          url: "https://m.twitch.tv/liondro",
+          url: "https://m.twitch.tv/liondro_",
           label: "Twitch",
         },
         {
