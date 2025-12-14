@@ -9,7 +9,7 @@ import {
   Home,
   Users,
   Trophy,
-  Pencil, FileIcon,
+  Pencil, FileIcon, Code,
 } from "lucide-react";
 
 function Footer() {
@@ -75,6 +75,11 @@ function Footer() {
               <li>
                 <Link to="/rules" className="footer-link">
                   <Shield className="w-4 h-4" /> Rules
+                </Link>
+              </li>
+              <li>
+                <Link to="/changelog" className="footer-link">
+                  <Code className="w-4 h-4" /> Changelog
                 </Link>
               </li>
             </ul>
