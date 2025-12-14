@@ -120,17 +120,17 @@ function Rules() {
 
           <div className="rules-grid">
             <div
-              className="rule-card highlight-card"
-              data-aos="fade-up"
-              data-aos-delay="100"
+                className="rule-card highlight-card"
+                data-aos="fade-up"
+                data-aos-delay="100"
             >
               <div
-                className="rule-number"
-                style={{
-                  backgroundColor: "rgba(52, 152, 219, 0.2)",
-                  borderColor: "#3498db",
-                  color: "#3498db",
-                }}
+                  className="rule-number"
+                  style={{
+                    backgroundColor: "rgba(52, 152, 219, 0.2)",
+                    borderColor: "#3498db",
+                    color: "#3498db",
+                  }}
               >
                 1
               </div>
@@ -141,17 +141,17 @@ function Rules() {
             </div>
 
             <div
-              className="rule-card highlight-card"
-              data-aos="fade-up"
-              data-aos-delay="150"
+                className="rule-card highlight-card"
+                data-aos="fade-up"
+                data-aos-delay="150"
             >
               <div
-                className="rule-number"
-                style={{
-                  backgroundColor: "rgba(52, 152, 219, 0.2)",
-                  borderColor: "#3498db",
-                  color: "#3498db",
-                }}
+                  className="rule-number"
+                  style={{
+                    backgroundColor: "rgba(52, 152, 219, 0.2)",
+                    borderColor: "#3498db",
+                    color: "#3498db",
+                  }}
               >
                 2
               </div>
@@ -163,17 +163,17 @@ function Rules() {
             </div>
 
             <div
-              className="rule-card highlight-card"
-              data-aos="fade-up"
-              data-aos-delay="200"
+                className="rule-card highlight-card"
+                data-aos="fade-up"
+                data-aos-delay="200"
             >
               <div
-                className="rule-number"
-                style={{
-                  backgroundColor: "rgba(52, 152, 219, 0.2)",
-                  borderColor: "#3498db",
-                  color: "#3498db",
-                }}
+                  className="rule-number"
+                  style={{
+                    backgroundColor: "rgba(52, 152, 219, 0.2)",
+                    borderColor: "#3498db",
+                    color: "#3498db",
+                  }}
               >
                 3
               </div>
@@ -185,17 +185,17 @@ function Rules() {
             </div>
 
             <div
-              className="rule-card highlight-card"
-              data-aos="fade-up"
-              data-aos-delay="250"
+                className="rule-card highlight-card"
+                data-aos="fade-up"
+                data-aos-delay="250"
             >
               <div
-                className="rule-number"
-                style={{
-                  backgroundColor: "rgba(52, 152, 219, 0.2)",
-                  borderColor: "#3498db",
-                  color: "#3498db",
-                }}
+                  className="rule-number"
+                  style={{
+                    backgroundColor: "rgba(52, 152, 219, 0.2)",
+                    borderColor: "#3498db",
+                    color: "#3498db",
+                  }}
               >
                 4
               </div>
@@ -208,6 +208,27 @@ function Rules() {
                 create derivative works from, distribute, and display such
                 content. This ensures CrayonSMP can operate without legal
                 exposure related to user-generated content.
+              </p>
+            </div>
+
+            <div
+                className="rule-card highlight-card"
+                data-aos="fade-up"
+                data-aos-delay="300"
+            >
+              <div
+                  className="rule-number"
+                  style={{
+                    backgroundColor: "rgba(52, 152, 219, 0.2)",
+                    borderColor: "#3498db",
+                    color: "#3498db",
+                  }}
+              >
+                5
+              </div>
+              <h3 className="rule-title">Project Recording and Voice Rights</h3>
+              <p className="rule-description">
+                <strong>Consent to Recording and Publication:</strong> By accepting these Terms, the Participant grants CrayonSMP the explicit, irrevocable, worldwide, time-unlimited, and royalty-free exclusive right to use, reproduce, distribute, and publish all audio and video recordings created within the scope of the Project (the "Project Recordings"). This includes the right to use the Participant's recorded voice and likeness as contained in the Project Recordings for commercial and non-commercial publication on all platforms (e.g., YouTube, Twitch). The Participant waives any claim for compensation or royalties for this use.
               </p>
             </div>
           </div>
