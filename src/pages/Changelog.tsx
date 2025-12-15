@@ -123,31 +123,25 @@ const Changelog = () => {
               Filter nach Kategorie:
             </h2>
             <div className="flex flex-wrap gap-3">
-              {filterCategories.map((category) => (
-                <button
-                  key={category}
-                  onClick={() => handleCategoryChange(category)}
-                  className={`
-                                        cta-button text-sm font-medium transition-all duration-300
-                                        ${
-                                          activeCategory === category
-                                            ? "primary"
-                                            : "secondary"
-                                        }
-                                    `}
-                  style={
-                    activeCategory === category
-                      ? {}
-                      : {
-                          backgroundColor: "rgba(255, 255, 255, 0.08)",
-                          color: "var(--text-light)",
-                          border: "1px solid var(--border-color)",
-                        }
-                  }
-                >
-                  {category}
-                </button>
-              ))}
+              {filterCategories.map((category) => {
+                const isActive = activeCategory === category;
+                const base =
+                  "cta-button text-sm font-medium transition-all duration-300";
+                const activeClass = "primary";
+                const inactiveClass =
+                  "secondary bg-[rgba(255,255,255,0.08)] text-[var(--text-light)] border-[1px] border-[var(--border-color)]";
+                return (
+                  <button
+                    key={category}
+                    onClick={() => handleCategoryChange(category)}
+                    className={`${base} ${
+                      isActive ? activeClass : inactiveClass
+                    }`}
+                  >
+                    {category}
+                  </button>
+                );
+              })}
             </div>
           </section>
 
@@ -159,11 +153,34 @@ const Changelog = () => {
                   Lade Changelog-Einträge...
                 </p>
               </div>
+            ) : filteredChangelogs.length === 0 ? (
+              <div className="p-8 bg-(--bg-card) rounded-xl border border-(--border-color) text-center">
+                <p className="text-lg text-gray-300">
+                  Keine Changelog-Einträge vorhanden.
+                </p>
+                <p className="text-sm text-gray-400 mt-2">
+                  Versuche einen anderen Filter oder erstelle einen Eintrag im
+                  Adminbereich.
+                </p>
+              </div>
             ) : (
               <div className="space-y-8">
                 {filteredChangelogs.map((entry) => {
                   const EntryIcon =
                     IconMap[entry.icon as keyof typeof IconMap] || List;
+                  const formattedDate = (() => {
+                    try {
+                      const d = new Date(entry.date);
+                      return d.toLocaleDateString("de-DE", {
+                        day: "2-digit",
+                        month: "long",
+                        year: "numeric",
+                      });
+                    } catch {
+                      return entry.date as unknown as string;
+                    }
+                  })();
+
                   return (
                     <div
                       key={entry.id}
@@ -179,7 +196,7 @@ const Changelog = () => {
                         <CategoryBadges categories={entry.category} />
                       </div>
                       <p className="text-sm text-gray-400 mb-4">
-                        Veröffentlicht am: {entry.date}
+                        Veröffentlicht am: {formattedDate}
                       </p>
                       <p className="text-gray-300 mb-4">{entry.description}</p>
 
