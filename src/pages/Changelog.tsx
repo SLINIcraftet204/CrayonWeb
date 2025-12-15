@@ -10,7 +10,7 @@ import {
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { collection, getDocs, query, orderBy } from "firebase/firestore";
-import { db } from "../firebase";
+import { db } from "../firebase_dev";
 import {
   type ChangelogEntry,
   type ChangelogCategory,
