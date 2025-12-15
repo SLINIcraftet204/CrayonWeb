@@ -24,6 +24,21 @@ export const contentCreators = [
         ],
     },
     {
+        name: "Kansy",
+        nickname: "@kansy",
+        role: "Streamer",
+        image: "/media/streamer-pf/Kansy.png",
+        quote: "I am a bear 🐻",
+        color: "#9735f2",
+        socials: [
+            {
+                icon: Twitch,
+                url: "https://www.twitch.tv/kansy",
+                label: "Twitch",
+            },
+        ],
+    },
+    {
         name: "Giannicraft",
         nickname: "@Giannicrafter",
         role: "Streamer",
