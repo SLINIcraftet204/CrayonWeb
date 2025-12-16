@@ -10,7 +10,7 @@ import {
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { collection, getDocs, query, orderBy } from "firebase/firestore";
-import { db } from "../firebase_dev";
+import { db } from "../firebase_prod";
 import {
   type ChangelogEntry,
   type ChangelogCategory,
@@ -21,12 +21,12 @@ const IconMap: Record<ChangelogIcon, React.ElementType> = {
   Server: Server,
   Globe: Globe,
   MessageCircle: MessageCircle,
-  Allgemein: GitBranch,
+  Generally: GitBranch,
 };
 
-const filterCategories: (ChangelogCategory | "Alle")[] = [
-  "Alle",
-  "Allgemein",
+const filterCategories: (ChangelogCategory | "All")[] = [
+  "All",
+  "Generally",
   "Minecraft Server",
   "Website",
   "Discord",
@@ -43,8 +43,8 @@ const Changelog = () => {
   }, []);
 
   const [activeCategory, setActiveCategory] = useState<
-    ChangelogCategory | "Alle"
-  >("Alle");
+    ChangelogCategory | "All"
+  >("All");
   const [changelogs, setChangelogs] = useState<ChangelogEntry[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -70,7 +70,7 @@ const Changelog = () => {
         });
         setChangelogs(fetchedLogs);
       } catch (error) {
-        console.error("Fehler beim Laden des Changelogs:", error);
+        console.error("Error by loading changelogs:", error);
       } finally {
         setLoading(false);
       }
@@ -80,13 +80,13 @@ const Changelog = () => {
   }, []);
 
   const filteredChangelogs = useMemo(() => {
-    if (activeCategory === "Alle") return changelogs;
+    if (activeCategory === "All") return changelogs;
     return changelogs.filter((log) =>
       log.category.includes(activeCategory as ChangelogCategory)
     );
   }, [changelogs, activeCategory]);
 
-  const handleCategoryChange = (category: ChangelogCategory | "Alle") => {
+  const handleCategoryChange = (category: ChangelogCategory | "All") => {
     setActiveCategory(category);
   };
 
@@ -97,7 +97,7 @@ const Changelog = () => {
       "Minecraft Server": "bg-green-600",
       Website: "bg-blue-600",
       Discord: "bg-purple-600",
-      Allgemein: "bg-yellow-600",
+      Generally: "bg-yellow-600",
     };
     const baseStyle =
       "px-3 py-1 text-xs font-semibold rounded-full text-white whitespace-nowrap";
@@ -120,7 +120,7 @@ const Changelog = () => {
           {/* Filter Buttons */}
           <section className="section-card mb-12 p-6" data-aos="fade-up">
             <h2 className="text-xl font-bold mb-4 text-white border-b border-(--border-color) pb-3">
-              Filter nach Kategorie:
+              Sort by Category:
             </h2>
             <div className="flex flex-wrap gap-3">
               {filterCategories.map((category) => {
@@ -150,17 +150,16 @@ const Changelog = () => {
               <div className="text-center p-12 bg-(--bg-card) rounded-xl border border-(--border-color)">
                 <Loader className="w-12 h-12 mx-auto mb-4 text-[#ff0040] animate-spin" />
                 <p className="text-lg text-gray-400">
-                  Lade Changelog-Einträge...
+                  Load changelogs...
                 </p>
               </div>
             ) : filteredChangelogs.length === 0 ? (
               <div className="p-8 bg-(--bg-card) rounded-xl border border-(--border-color) text-center">
                 <p className="text-lg text-gray-300">
-                  Keine Changelog-Einträge vorhanden.
+                  No changelogs exists.
                 </p>
                 <p className="text-sm text-gray-400 mt-2">
-                  Versuche einen anderen Filter oder erstelle einen Eintrag im
-                  Adminbereich.
+                  No changelogs exists at this time.
                 </p>
               </div>
             ) : (
@@ -171,7 +170,7 @@ const Changelog = () => {
                   const formattedDate = (() => {
                     try {
                       const d = new Date(entry.date);
-                      return d.toLocaleDateString("de-DE", {
+                      return d.toLocaleDateString("en-EN", {
                         day: "2-digit",
                         month: "long",
                         year: "numeric",
@@ -196,7 +195,7 @@ const Changelog = () => {
                         <CategoryBadges categories={entry.category} />
                       </div>
                       <p className="text-sm text-gray-400 mb-4">
-                        Veröffentlicht am: {formattedDate}
+                        Published at: {formattedDate}
                       </p>
                       <p className="text-gray-300 mb-4">{entry.description}</p>
 

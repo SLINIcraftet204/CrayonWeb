@@ -1,5 +1,5 @@
-export type ChangelogCategory = 'Minecraft Server' | 'Website' | 'Discord' | 'Allgemein';
-export type ChangelogIcon = 'Server' | 'Globe' | 'MessageCircle' | 'Allgemein';
+export type ChangelogCategory = 'Minecraft Server' | 'Website' | 'Discord' | 'Generally';
+export type ChangelogIcon = 'Server' | 'Globe' | 'MessageCircle' | 'Generally';
 
 export interface ChangelogEntry {
     id: string;
