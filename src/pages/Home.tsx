@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import {
   Rocket,
@@ -27,6 +27,44 @@ function Home() {
     });
   }, []);
 
+  const CountdownTimer = ({ targetDate }: { targetDate: string }) => {
+    const [timeLeft, setTimeLeft] = useState({
+      days: 0, hours: 0, minutes: 0, seconds: 0
+    });
+
+    useEffect(() => {
+      const timer = setInterval(() => {
+        const target = new Date(targetDate).getTime();
+        const now = new Date().getTime();
+        const difference = target - now;
+
+        if (difference > 0) {
+          setTimeLeft({
+            days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+            hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+            minutes: Math.floor((difference / 1000 / 60) % 60),
+            seconds: Math.floor((difference / 1000) % 60),
+          });
+        } else {
+          clearInterval(timer);
+        }
+      }, 1000);
+
+      return () => clearInterval(timer);
+    }, [targetDate]);
+
+    return (
+        <div className="flex gap-4 justify-center mt-8 text-white font-mono">
+          {Object.entries(timeLeft).map(([label, value]) => (
+              <div key={label} className="flex flex-col items-center bg-black/40 p-4 rounded-lg border border-white/10 min-w-[80px]">
+                <span className="text-3xl md:text-4xl font-bold">{value}</span>
+                <span className="text-xs uppercase text-gray-400">{label}</span>
+              </div>
+          ))}
+        </div>
+    );
+  };
+
   return (
     <>
       {/* Hero Section */}
@@ -46,6 +84,12 @@ function Home() {
               directly shapes the world. Design, build, and integrate your own
               content!
             </p>
+
+            <div className="mb-10">
+              <h3 className="text-[#ff0040] font-bold uppercase tracking-widest mb-2">Launch Countdown</h3>
+              <CountdownTimer targetDate="2025-12-20T20:00:00+01:00" />
+            </div>
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="https://discord.gg/M2M6m3j2Qf"
