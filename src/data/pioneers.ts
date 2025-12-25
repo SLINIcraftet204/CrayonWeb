@@ -281,6 +281,21 @@ export const members = [
       },
     ],
   },
+  {
+    name: "Controller_Man",
+    nickname: "@controller_man",
+    role: "Member",
+    image: "/media/streamer-pf/ControllerMan.png",
+    quote: "I may be flat broke, but I’ll never be flat-coke.",
+    color: "#4d4848",
+    socials: [
+      {
+        icon: Youtube,
+        url: "https://www.youtube.com/@Controller_Man17",
+        label: "YouTube",
+      },
+    ],
+  },
 ];
 
 export const sponsors = [
